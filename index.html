@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортивный Комплекс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1521747116042-5c3d2b7f2851?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjYwMHwwfDF8c2VhY3JlfDEwfHxnZW5lcmFsfGVufDB8fHx8fDE2NjcwMjY2NjE&ixlib=rb-1.2.1&q=80&w=1080') center/cover no-repeat;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #28a745;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cta-btn {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .cta-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Стиль для таблицы расписания */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .schedule-table th,
+        .schedule-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .schedule-table th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        /* Анимация для кнопок */
+        .cta-btn {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Спортивный Комплекс "Актив"</h1>
+    <p>Ваше здоровье — наша цель!</p>
+</header>
+
+<nav>
+    <a href="#home">Главная</a>
+    <a href="#about">О нас</a>
+    <a href="#schedule">Расписание</a>
+    <a href="#prices">Цены</a>
+    <a href="#contact">Контакты</a>
+</nav>
+
+<div class="container" id="home">
+    <section class="intro">
+        <h2 class="section-title">Добро пожаловать в наш спортивный комплекс!</h2>
+        <div class="card">
+            <p>Наш спортивный комплекс предлагает широкий спектр услуг для людей всех возрастов и уровней подготовки. Мы предлагаем тренировки по различным видам спорта, включая фитнес, плавание, йогу и многое другое.</p>
+            <a href="#about" class="cta-btn">Узнать больше</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="card">
+            <ul style="text-align: left;">
+                <li>Фитнес-тренировки</li>
+                <li>Бассейн</li>
+                <li>Йога и пилатес</li>
+                <li>Групповые занятия</li>
+                <li>Тренажерный зал</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<!-- О нас -->
+<div class="container" id="about">
+    <section class="about">
+        <h2 class="section-title">О нашем комплексе</h2>
+        <div class="card">
+            <h3>Наша миссия</h3>
+            <p>Мы стремимся предоставить всем нашим клиентам высококачественные спортивные услуги, заботясь о их здоровье и благополучии. Наши тренеры — профессионалы с многолетним опытом, готовые помочь вам достичь ваших целей.</p>
+        </div>
+    </section>
+</div>
+
+<!-- Расписание -->
+<div class="container" id="schedule">
+    <section class="schedule">
+        <h2 class="section-title">Расписание занятий</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Занятие</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:00</td>
+                    <td>Фитнес</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>Йога</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 13:00</td>
+                    <td>Групповые тренировки</td>
+                </tr>
+                <tr>
+                    <td>15:00 - 16:00</td>
+                    <td>Плавание</td>
+                </tr>
+                <tr>
+                    <td>17:00 - 18:00</td>
+                    <td>Тренажерный зал</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<!-- Цены -->
+<div class="container" id="prices">
+    <section class="prices">
+        <h2 class="section-title">Цены</h2>
+        <div class="card">
+            <ul style="text-align: left;">
+                <li>Абонемент на 1 месяц — 1500₽</li>
+                <li>Абонемент на 3 месяца — 4000₽</li>
+                <li>Абонемент на 6 месяцев — 7500₽</li>
+                <li>Абонемент на 1 год — 14000₽</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<!-- Запись на занятия -->
+<div class="container" id="contact">
+    <section class="contact">
+        <h2 class="section-title">Запишитесь на занятия</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Комментарии" rows="4"></textarea>
+            <button type="submit">Записаться</button>
+        </form>
+    </section>
+</div>
+
+<!-- Контактная информация -->
+<footer>
+    <p>© 2024 Спортивный Комплекс "Актив"</p>
+    <p>Контактный телефон: <strong>+7 123 456 7890</strong></p>
+    <p>Email: <strong>info@active.com</strong></p>
+</footer>
+
+</body>
+</html>
